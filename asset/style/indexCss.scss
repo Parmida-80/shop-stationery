@@ -1,0 +1,178 @@
+////////////font
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import "color";
+@import "function";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:Root {
+    width: 100%;
+    height: 100%;
+}
+
+#head {
+    @include navbar();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    i {
+        font-size: 30px;
+        color: rgb(255, 255, 255)
+    }
+}
+
+#navbar {
+    position: absolute;
+
+    ul {
+        @include blurBox(20px);
+        position: relative;
+        width: 200px;
+        right: 92%;
+        top: -20px;
+        visibility: hidden;
+
+    }
+
+    li {
+        padding-top: 15px;
+
+        a {
+            color: #646464;
+        }
+    }
+}
+
+#navbar2 {
+    @include navbar();
+    display: none;
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.navbar {
+    list-style: none;
+    text-align: center;
+    padding: 0px 10px;
+
+    a {
+        text-decoration: none;
+        color: azure;
+        font-size: 18px;
+        padding: 10px;
+        font-weight: bold;
+    }
+}
+
+.banner {
+    img {
+
+        width: 100%;
+    }
+}
+
+/////////////main///////////////
+#box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .boxHead {
+        @include box(200px, 200px);
+
+        h2 {
+            color: aliceblue;
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .lin {
+            width: 100px;
+            height: 6px;
+            background-color: beige;
+            position: relative;
+            left: 50px;
+            right: 50px;
+            bottom: 0;
+            top: 10px;
+            background: linear-gradient(90deg, #ba7556 0%, rgba(240, 172, 140, 1) 50%, #ba7556 100%);
+
+        }
+    }
+}
+
+#main-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f4ebea;
+    padding: 30px;
+    margin: 30px 0;
+
+    #box-center {
+        background-color: $color-Pink;
+        border-radius: 3px;
+    }
+
+    div {
+        @include box(30%);
+        padding: 0 20px;
+        padding: 10px;
+        justify-content: center;
+
+
+        button {
+            background-color: $boxColor;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media(min-width:780px) {
+    #navbar {
+        display: none;
+    }
+
+    #navbar2 {
+        display: inline-block;
+        @include navbar();
+        padding: 15px;
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+            li {
+                position: relative;
+                list-style: none;
+                padding: 8px 16px;
+            }
+
+            aa {
+                    text-decoration: none;
+                    display: block;
+                    color: black;
+                }
+            
+        }
+    }
+
+}

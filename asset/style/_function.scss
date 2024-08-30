@@ -1,0 +1,25 @@
+@mixin box($width,$height:default) {
+    width: $width;
+    height: $height;
+    text-align: center;
+    background-color: $color-Pink;
+    margin: 10px 30px;
+    box-shadow: 0px 1px 6px 0px #a2a2a2;
+    padding: 70px 0;
+}
+
+@mixin navbar() {
+    width: 100%;
+    background-color: $color-Pink;
+    height: 100%;
+    padding: 10px;
+}
+
+@mixin blurBox($paddingBlur:0) {
+    padding:$paddingBlur;
+    background-color:#ebcfcb47;
+    backdrop-filter: blur(10px);
+    /* ایجاد افکت بلور */
+    -webkit-backdrop-filter: blur(10px);
+    /* ایجاد افکت بلور برای مرورگرهای قدیمی‌تر */
+}

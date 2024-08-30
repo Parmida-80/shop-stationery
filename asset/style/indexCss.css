@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:Root {
+  width: 100%;
+  height: 100%;
+}
+
+#head {
+  width: 100%;
+  background-color: #ebcfcb;
+  height: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#head i {
+  font-size: 30px;
+  color: white;
+}
+
+#navbar {
+  position: absolute;
+}
+
+#navbar ul {
+  padding: 20px;
+  background-color: #ebcfcb47;
+  backdrop-filter: blur(10px);
+  /* ایجاد افکت بلور */
+  -webkit-backdrop-filter: blur(10px);
+  /* ایجاد افکت بلور برای مرورگرهای قدیمی‌تر */
+  position: relative;
+  width: 200px;
+  right: 92%;
+  top: -20px;
+  visibility: hidden;
+}
+
+#navbar li {
+  padding-top: 15px;
+}
+
+#navbar li a {
+  color: #646464;
+}
+
+#navbar2 {
+  width: 100%;
+  background-color: #ebcfcb;
+  height: 100%;
+  padding: 10px;
+  display: none;
+}
+
+#navbar2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar {
+  list-style: none;
+  text-align: center;
+  padding: 0px 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: azure;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.banner img {
+  width: 100%;
+}
+
+#box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#box .boxHead {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  background-color: #ebcfcb;
+  margin: 10px 30px;
+  -webkit-box-shadow: 0px 1px 6px 0px #a2a2a2;
+          box-shadow: 0px 1px 6px 0px #a2a2a2;
+  padding: 70px 0;
+}
+
+#box .boxHead h2 {
+  color: aliceblue;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#box .boxHead .lin {
+  width: 100px;
+  height: 6px;
+  background-color: beige;
+  position: relative;
+  left: 50px;
+  right: 50px;
+  bottom: 0;
+  top: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#ba7556), color-stop(50%, #f0ac8c), to(#ba7556));
+  background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
+}
+
+#main-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #f4ebea;
+  padding: 30px;
+  margin: 30px 0;
+}
+
+#main-main #box-center {
+  background-color: #ebcfcb;
+  border-radius: 3px;
+}
+
+#main-main div {
+  width: 30%;
+  height: default;
+  text-align: center;
+  background-color: #ebcfcb;
+  margin: 10px 30px;
+  -webkit-box-shadow: 0px 1px 6px 0px #a2a2a2;
+          box-shadow: 0px 1px 6px 0px #a2a2a2;
+  padding: 70px 0;
+  padding: 0 20px;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-main div button {
+  background-color: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
+}
+
+#main-main div img {
+  width: 100%;
+}
+
+@media (min-width: 780px) {
+  #navbar {
+    display: none;
+  }
+  #navbar2 {
+    display: inline-block;
+    width: 100%;
+    background-color: #ebcfcb;
+    height: 100%;
+    padding: 10px;
+    padding: 15px;
+  }
+  #navbar2 .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  #navbar2 .dropdown li {
+    position: relative;
+    list-style: none;
+    padding: 8px 16px;
+  }
+  #navbar2 .dropdown aa {
+    text-decoration: none;
+    display: block;
+    color: black;
+  }
+}
+/*# sourceMappingURL=indexCss.css.map */
