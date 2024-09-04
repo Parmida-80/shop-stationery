@@ -1,4 +1,4 @@
-@mixin box($width,$height:default) {
+@mixin box($width, $height: default) {
     width: $width;
     height: $height;
     text-align: center;
@@ -8,18 +8,33 @@
     padding: 70px 0;
 }
 
-@mixin navbar() {
+@mixin navbar($background: $color-Pink) {
     width: 100%;
-    background-color: $color-Pink;
+    background-color: $background;
     height: 100%;
     padding: 10px;
 }
 
-@mixin blurBox($paddingBlur:0) {
-    padding:$paddingBlur;
-    background-color:#ebcfcb47;
+@mixin blurBox($paddingBlur: 0) {
+    padding: $paddingBlur;
+    background-color: #ebcfcb47;
     backdrop-filter: blur(10px);
     /* ایجاد افکت بلور */
     -webkit-backdrop-filter: blur(10px);
     /* ایجاد افکت بلور برای مرورگرهای قدیمی‌تر */
+}
+
+@mixin link-a($font-size: 18px, $padding: 5px) {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: $font-size;
+    padding: $padding;
+    font-weight: bold;
+}
+
+@mixin fontBox() {
+    color: aliceblue;
+    font-family: "Gulzar", serif;
+    font-weight: 500;
+    font-style: normal;
 }

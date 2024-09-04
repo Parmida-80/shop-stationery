@@ -1,5 +1,6 @@
 ////////////font
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
 @import "color";
 @import "function";
 
@@ -14,6 +15,7 @@
     height: 100%;
 }
 
+//////////////////////////header////////
 #head {
     @include navbar();
     display: flex;
@@ -24,51 +26,13 @@
         font-size: 30px;
         color: rgb(255, 255, 255)
     }
-}
 
-#navbar {
-    position: absolute;
-
-    ul {
-        @include blurBox(20px);
+    #menu {
         position: relative;
-        width: 200px;
-        right: 92%;
-        top: -20px;
-        visibility: hidden;
-
     }
 
-    li {
-        padding-top: 15px;
-
-        a {
-            color: #646464;
-        }
-    }
-}
-
-#navbar2 {
-    @include navbar();
-    display: none;
-
-    ul {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.navbar {
-    list-style: none;
-    text-align: center;
-    padding: 0px 10px;
-
-    a {
-        text-decoration: none;
-        color: azure;
-        font-size: 18px;
-        padding: 10px;
-        font-weight: bold;
+    .logohead {
+        display: none
     }
 }
 
@@ -79,7 +43,101 @@
     }
 }
 
-/////////////main///////////////
+#miniNavbar {
+    display: inline-block;
+
+    #leader {
+        @include blurBox(20px);
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        left: 0;
+        top: 54px;
+        padding: 0;
+        visibility: hidden;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    a {
+        color: #646464;
+    }
+
+    li {
+        line-height: 40px
+    }
+
+    .dropdown {
+        position: relative;
+        background: #ebcfcba8;
+        right: 40px;
+
+    }
+}
+
+#BiggerNavbar {
+    @include navbar();
+    display: none;
+
+    .leader {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.list-navbar {
+    list-style: none;
+    text-align: center;
+    padding: 0px 10px;
+
+    a {
+        @include link-a();
+        padding: 0;
+        color: white;
+    }
+}
+
+.Dropdown-list::after {
+    content: "";
+    display: inline-block;
+    /* نمایش به صورت بلاک */
+    font-family: 'bootstrap-icons';
+    /* نام فونت آیکن */
+    font-size: 0.8em;
+    /* اندازه فونت */
+    line-height: 1;
+    color: #eee;
+}
+
+.Dropdown-list::after {
+    content: "\F229";
+    /* یونیکد مربوط به آیکن caret-down-fill */
+}
+
+.dropdown {
+    @include blurBox;
+    background-color: #e2e2e261;
+    padding: 10px;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 1;
+    max-width: 200px;
+    width: 100%;
+    line-height: 30px;
+    display: none;
+    margin: 0 -40px;
+    list-style: none;
+
+    a {
+        color: $colorLINKnavbar;
+    }
+}
+
+.Dropdown-list:hover .dropdown {
+    display: block;
+}
+
+/////////////////////////main///////////////
 #box {
     display: flex;
     justify-content: center;
@@ -89,10 +147,8 @@
         @include box(200px, 200px);
 
         h2 {
-            color: aliceblue;
-            font-family: "Dancing Script", cursive;
-            font-optical-sizing: auto;
-            font-style: normal;
+            @include fontBox();
+            margin: -5px 0 -15px;
         }
 
         .lin {
@@ -111,16 +167,47 @@
 }
 
 #main-main {
+    background-color: #e2e2e294;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    background-color: #f4ebea;
+    justify-content: center;
     padding: 30px;
     margin: 30px 0;
+    @include fontBox();
 
     #box-center {
         background-color: $color-Pink;
         border-radius: 3px;
+        width: 400px;
+        height: 300px;
+
+
+        .butom {
+            background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
+            width: 130px;
+            margin: 10px auto;
+            @include link-a();
+            padding: 2px 50px;
+        }
+
+        p {
+            font-size: 60px;
+            color: rgb(99, 61, 44);
+            line-height: 90px;
+
+
+            span {
+                display: block;
+                font-size: 20px;
+                color: white;
+                font-size: 40px;
+                font-family: "Dancing Script", cursive;
+            }
+
+        }
+
+
+
     }
 
     div {
@@ -128,11 +215,15 @@
         padding: 0 20px;
         padding: 10px;
         justify-content: center;
-
+        text-align: center;
 
         button {
             background-color: $boxColor;
         }
+    }
+
+    .box-center {
+        display: none;
 
         img {
             width: 100%;
@@ -140,39 +231,172 @@
     }
 }
 
+
+ #boxFooter {
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     width: 100%;
+
+     p {
+         line-height: 40px;
+         font-weight: bold;
+         font-size: 18px;
+     }
+ }
+
+ .NewProducts {
+     display: flex;
+     overflow-x: auto;
+     /* استفاده از auto بجای scroll */
+     width: 100%;
+     padding: 10px 0;
+     /* کمی padding اضافه کنید */
+     scroll-snap-type: x mandatory; /* اضافه کردن scroll snapping */
+     scroll-padding: 10px; /* پدینگ برای اسکرول */
+     box-sizing: border-box; /* تضمین اینکه padding و width با هم تداخل ندارند */
+    
+ }
+
+ .NewProducts::-webkit-scrollbar {
+     display: none;
+     /* مخفی کردن scrollbar برای تجربه کاربری بهتر */
+ }
+
+ .boxFooter {
+     min-width: 200px;
+     /* حداقل عرض هر محصول */
+     margin: 10px;
+ }
+
+ .boxFooter img {
+     width: 100%;
+     /* استفاده از 100% برای سازگاری بهتر */
+     height: auto;
+     /* ارتفاع خودکار برای حفظ نسبت تصویر */
+ }
+
+
+footer {
+    background-color: black;
+    width: 100%;
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+    a{
+        @include link-a();
+        line-height:40px
+    }
+
+    .footer{
+        display: inline-block;
+        min-width: 100px;
+        margin: 10px;
+    }
+}
+.communication{
+    display: flex;
+    justify-content: center;
+    div:nth-child(2){background: linear-gradient(52deg, rgba(39,132,212,1) 0%, rgba(112,203,250,1) 59%, rgba(26,214,136,1) 100%);}
+    div:nth-child(1){background: linear-gradient(52deg, rgba(212,39,127,1) 0%, rgba(206,86,86,1) 46%, rgba(174,112,250,1) 72%, rgba(214,26,185,1) 100%);}
+    div:nth-child(3){background:red}
+    margin: auto 10px;
+
+    div{
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
+        margin: 10px;
+        
+        
+        i{
+            font-size: 20px;
+            color: white;
+            
+        }
+    }
+}
+
+
+/////////////////////////rispansive/////////////////
 @media(min-width:780px) {
-    #navbar {
+
+    #head {
+        #menu {
+            display: none;
+        }
+
+        .logohead {
+            display: inline-block;
+            width: 50px;
+            rotate: 5deg;
+        }
+    }
+
+    #miniNavbar {
         display: none;
     }
 
-    #navbar2 {
+    #BiggerNavbar {
         display: inline-block;
         @include navbar();
         padding: 15px;
 
         .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
+            background-color: #ebcfcb7a;
 
-            li {
-                position: relative;
-                list-style: none;
-                padding: 8px 16px;
+            .list-navbar {
+                background-color: #ba888b45;
+                border-radius: 3px;
+                margin: 5px 0;
+
+                &:hover {
+                    background-color: #fcfcfcd7;
+                }
             }
 
-            aa {
-                    text-decoration: none;
-                    display: block;
-                    color: black;
-                }
-            
+
         }
     }
 
+
+
+    /////////////main/////////////
+    #main-main {
+
+        div {
+            width: 100%;
+        }
+
+        #box-center {
+            width: 30%;
+            height: 400px;
+        }
+
+        .box-center {
+            width: 30%;
+            display: inline;
+
+            .banner {
+                width: 100%;
+
+            }
+        }
+    }
+
+}
+
+@media(min-width:842px) {
+    .list-navbar {
+        a {
+            padding: 5px;
+        }
+    }
 }

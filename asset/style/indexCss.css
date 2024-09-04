@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gulzar&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -33,33 +34,55 @@
   color: white;
 }
 
-#navbar {
-  position: absolute;
+#head #menu {
+  position: relative;
 }
 
-#navbar ul {
+#head .logohead {
+  display: none;
+}
+
+.banner img {
+  width: 100%;
+}
+
+#miniNavbar {
+  display: inline-block;
+}
+
+#miniNavbar #leader {
   padding: 20px;
   background-color: #ebcfcb47;
   backdrop-filter: blur(10px);
   /* ایجاد افکت بلور */
   -webkit-backdrop-filter: blur(10px);
   /* ایجاد افکت بلور برای مرورگرهای قدیمی‌تر */
-  position: relative;
+  position: absolute;
   width: 200px;
-  right: 92%;
-  top: -20px;
+  height: 100%;
+  left: 0;
+  top: 54px;
+  padding: 0;
   visibility: hidden;
+  white-space: nowrap;
+  z-index: 1;
 }
 
-#navbar li {
-  padding-top: 15px;
-}
-
-#navbar li a {
+#miniNavbar a {
   color: #646464;
 }
 
-#navbar2 {
+#miniNavbar li {
+  line-height: 40px;
+}
+
+#miniNavbar .dropdown {
+  position: relative;
+  background: #ebcfcba8;
+  right: 40px;
+}
+
+#BiggerNavbar {
   width: 100%;
   background-color: #ebcfcb;
   height: 100%;
@@ -67,7 +90,7 @@
   display: none;
 }
 
-#navbar2 ul {
+#BiggerNavbar .leader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,22 +99,65 @@
           justify-content: center;
 }
 
-.navbar {
+.list-navbar {
   list-style: none;
   text-align: center;
   padding: 0px 10px;
 }
 
-.navbar a {
+.list-navbar a {
   text-decoration: none;
-  color: azure;
+  color: white;
   font-size: 18px;
-  padding: 10px;
+  padding: 5px;
   font-weight: bold;
+  padding: 0;
+  color: white;
 }
 
-.banner img {
+.Dropdown-list::after {
+  content: "";
+  display: inline-block;
+  /* نمایش به صورت بلاک */
+  font-family: 'bootstrap-icons';
+  /* نام فونت آیکن */
+  font-size: 0.8em;
+  /* اندازه فونت */
+  line-height: 1;
+  color: #eee;
+}
+
+.Dropdown-list::after {
+  content: "\F229";
+  /* یونیکد مربوط به آیکن caret-down-fill */
+}
+
+.dropdown {
+  padding: 0;
+  background-color: #ebcfcb47;
+  backdrop-filter: blur(10px);
+  /* ایجاد افکت بلور */
+  -webkit-backdrop-filter: blur(10px);
+  /* ایجاد افکت بلور برای مرورگرهای قدیمی‌تر */
+  background-color: #e2e2e261;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  z-index: 1;
+  max-width: 200px;
   width: 100%;
+  line-height: 30px;
+  display: none;
+  margin: 0 -40px;
+  list-style: none;
+}
+
+.dropdown a {
+  color: #646464;
+}
+
+.Dropdown-list:hover .dropdown {
+  display: block;
 }
 
 #box {
@@ -118,9 +184,10 @@
 
 #box .boxHead h2 {
   color: aliceblue;
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
+  font-family: "Gulzar", serif;
+  font-weight: 500;
   font-style: normal;
+  margin: -5px 0 -15px;
 }
 
 #box .boxHead .lin {
@@ -137,22 +204,55 @@
 }
 
 #main-main {
+  background-color: #e2e2e294;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #f4ebea;
   padding: 30px;
   margin: 30px 0;
+  color: aliceblue;
+  font-family: "Gulzar", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 #main-main #box-center {
   background-color: #ebcfcb;
   border-radius: 3px;
+  width: 400px;
+  height: 300px;
+}
+
+#main-main #box-center .butom {
+  background: -webkit-gradient(linear, left top, right top, from(#ba7556), color-stop(50%, #f0ac8c), to(#ba7556));
+  background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
+  width: 130px;
+  margin: 10px auto;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
+  padding: 2px 50px;
+}
+
+#main-main #box-center p {
+  font-size: 60px;
+  color: #633d2c;
+  line-height: 90px;
+}
+
+#main-main #box-center p span {
+  display: block;
+  font-size: 20px;
+  color: white;
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
 }
 
 #main-main div {
@@ -169,21 +269,156 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 #main-main div button {
   background-color: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
 }
 
-#main-main div img {
+#main-main .box-center {
+  display: none;
+}
+
+#main-main .box-center img {
   width: 100%;
 }
 
+#boxFooter {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#boxFooter p {
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.NewProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  /* استفاده از auto بجای scroll */
+  width: 100%;
+  padding: 10px 0;
+  /* کمی padding اضافه کنید */
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  /* اضافه کردن scroll snapping */
+  scroll-padding: 10px;
+  /* پدینگ برای اسکرول */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* تضمین اینکه padding و width با هم تداخل ندارند */
+}
+
+.NewProducts::-webkit-scrollbar {
+  display: none;
+  /* مخفی کردن scrollbar برای تجربه کاربری بهتر */
+}
+
+.boxFooter {
+  min-width: 200px;
+  /* حداقل عرض هر محصول */
+  margin: 10px;
+}
+
+.boxFooter img {
+  width: 100%;
+  /* استفاده از 100% برای سازگاری بهتر */
+  height: auto;
+  /* ارتفاع خودکار برای حفظ نسبت تصویر */
+}
+
+footer {
+  background-color: black;
+  width: 100%;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+footer .footer {
+  display: inline-block;
+  min-width: 100px;
+  margin: 10px;
+}
+
+.communication {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto 10px;
+}
+
+.communication div:nth-child(2) {
+  background: linear-gradient(52deg, #2784d4 0%, #70cbfa 59%, #1ad688 100%);
+}
+
+.communication div:nth-child(1) {
+  background: linear-gradient(52deg, #d4277f 0%, #ce5656 46%, #ae70fa 72%, #d61ab9 100%);
+}
+
+.communication div:nth-child(3) {
+  background: red;
+}
+
+.communication div {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+.communication div i {
+  font-size: 20px;
+  color: white;
+}
+
 @media (min-width: 780px) {
-  #navbar {
+  #head #menu {
     display: none;
   }
-  #navbar2 {
+  #head .logohead {
+    display: inline-block;
+    width: 50px;
+    rotate: 5deg;
+  }
+  #miniNavbar {
+    display: none;
+  }
+  #BiggerNavbar {
     display: inline-block;
     width: 100%;
     background-color: #ebcfcb;
@@ -191,26 +426,36 @@
     padding: 10px;
     padding: 15px;
   }
-  #navbar2 .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  #BiggerNavbar .dropdown {
+    background-color: #ebcfcb7a;
   }
-  #navbar2 .dropdown li {
-    position: relative;
-    list-style: none;
-    padding: 8px 16px;
+  #BiggerNavbar .dropdown .list-navbar {
+    background-color: #ba888b45;
+    border-radius: 3px;
+    margin: 5px 0;
   }
-  #navbar2 .dropdown aa {
-    text-decoration: none;
-    display: block;
-    color: black;
+  #BiggerNavbar .dropdown .list-navbar:hover {
+    background-color: #fcfcfcd7;
+  }
+  #main-main div {
+    width: 100%;
+  }
+  #main-main #box-center {
+    width: 30%;
+    height: 400px;
+  }
+  #main-main .box-center {
+    width: 30%;
+    display: inline;
+  }
+  #main-main .box-center .banner {
+    width: 100%;
+  }
+}
+
+@media (min-width: 842px) {
+  .list-navbar a {
+    padding: 5px;
   }
 }
 /*# sourceMappingURL=indexCss.css.map */
