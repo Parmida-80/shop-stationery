@@ -42,6 +42,13 @@
   display: none;
 }
 
+.logoHeader {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .banner img {
   width: 100%;
 }
@@ -160,6 +167,20 @@
   display: block;
 }
 
+.dropdown {
+  background-color: #ebcfcb7a;
+}
+
+.dropdown .list-navbar {
+  background-color: #ba888b45;
+  border-radius: 3px;
+  margin: 5px 0;
+}
+
+.dropdown .list-navbar:hover {
+  background-color: #fcfcfcd7;
+}
+
 #box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -213,38 +234,35 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 30px;
-  margin: 30px 0;
   color: aliceblue;
   font-family: "Gulzar", serif;
   font-weight: 500;
   font-style: normal;
+  width: 100%;
+  padding: 30px;
+  margin: 20px 0;
 }
 
-#main-main #box-center {
+#main-main div {
+  padding: 0 20px;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100%;
   background-color: #ebcfcb;
   border-radius: 3px;
-  width: 400px;
-  height: 300px;
-}
-
-#main-main #box-center .butom {
-  background: -webkit-gradient(linear, left top, right top, from(#ba7556), color-stop(50%, #f0ac8c), to(#ba7556));
-  background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
-  width: 130px;
-  margin: 10px auto;
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  padding: 5px;
-  font-weight: bold;
-  padding: 2px 50px;
+  margin: 20px;
 }
 
 #main-main #box-center p {
-  font-size: 60px;
+  font-size: 45px;
   color: #633d2c;
-  line-height: 90px;
+  padding: 50px 0;
+  font-size: 2.5rem;
+  /* استفاده از واحدهای ریسپانسیو */
+  padding: 20px 0;
 }
 
 #main-main #box-center p span {
@@ -255,32 +273,39 @@
   font-family: "Dancing Script", cursive;
 }
 
-#main-main div {
-  width: 30%;
-  height: default;
-  text-align: center;
-  background-color: #ebcfcb;
-  margin: 10px 30px;
-  -webkit-box-shadow: 0px 1px 6px 0px #a2a2a2;
-          box-shadow: 0px 1px 6px 0px #a2a2a2;
-  padding: 70px 0;
-  padding: 0 20px;
-  padding: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+#main-main #box-center .butom {
+  background: -webkit-gradient(linear, left top, right top, from(#ba7556), color-stop(50%, #f0ac8c), to(#ba7556));
+  background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
+  width: 150px;
+  margin: -60px auto;
+  -webkit-transform: skew(-25deg);
+          transform: skew(-25deg);
+  padding: 0;
+  height: 40px;
 }
 
-#main-main div button {
-  background-color: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
+#main-main #box-center .butom a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
+  font-style: none;
 }
 
-#main-main .box-center {
+.box-center {
   display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
-#main-main .box-center img {
+.box-center p {
+  font-size: 32px;
+}
+
+.box-center img {
   width: 100%;
 }
 
@@ -386,7 +411,7 @@ footer .footer {
 }
 
 .communication div:nth-child(3) {
-  background: red;
+  background: linear-gradient(52deg, #8ded5c 0%, #2bf900 100%);
 }
 
 .communication div {
@@ -426,29 +451,29 @@ footer .footer {
     padding: 10px;
     padding: 15px;
   }
-  #BiggerNavbar .dropdown {
-    background-color: #ebcfcb7a;
-  }
-  #BiggerNavbar .dropdown .list-navbar {
-    background-color: #ba888b45;
-    border-radius: 3px;
-    margin: 5px 0;
-  }
-  #BiggerNavbar .dropdown .list-navbar:hover {
-    background-color: #fcfcfcd7;
-  }
-  #main-main div {
+  #main-main {
+    background-color: #e2e2e294;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: aliceblue;
+    font-family: "Gulzar", serif;
+    font-weight: 500;
+    font-style: normal;
     width: 100%;
   }
-  #main-main #box-center {
+  #main-main div {
     width: 30%;
-    height: 400px;
   }
   #main-main .box-center {
-    width: 30%;
     display: inline;
   }
-  #main-main .box-center .banner {
+  #main-main .box-center img {
     width: 100%;
   }
 }
