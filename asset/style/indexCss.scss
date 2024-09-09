@@ -205,14 +205,15 @@
 
         div {
 
-            padding: 0 20px;
-            padding: 10px;
+            padding: 20px;
+            
             justify-content: center;
             text-align: center;
             width: 100%;
             background-color: $color-Pink;
             border-radius: 3px;
             margin: 20px;
+            height: 100%;
 
         }
 
@@ -220,11 +221,7 @@
             p {
                 font-size: 45px;
                 color: rgb(99, 61, 44);
-                padding: 50px 0;
-
                 font-size: 2.5rem; /* استفاده از واحدهای ریسپانسیو */
-            
-                padding: 20px 0;
             
                 span {
                     display: block;
@@ -239,7 +236,7 @@
             .butom {
                 background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
                 width: 150px;
-                margin: -60px auto;
+                margin: 0px auto;
                 transform: skew(-25deg);
                 padding: 0;
                 height: 40px;
@@ -249,22 +246,20 @@
                     font-style: none;
                 }
 
+                
+
             }
 
         }
-
     }
+        
 
     .box-center {
         display: none;
-        align-items: center;
-        text-align: center;
+        
 
 
-        p {
-
-            font-size: 32px;
-        }
+        
 
         img {
             width: 100%;
@@ -453,6 +448,7 @@
 
             div {
                 width: 30%;
+                height: 100%;
 
             }
 
