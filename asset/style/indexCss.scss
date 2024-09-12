@@ -37,161 +37,425 @@
 }
 
 .logoHeader {
-    width: 200px;
+    width: 11rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
 
 
-    .banner {
-        img {
+.banner {
+    img {
 
-            width: 100%;
+        width: 100%;
+    }
+}
+
+#miniNavbar {
+    display: inline-block;
+
+    #leader {
+        @include blurBox(20px);
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        left: 0;
+        top: 54px;
+        padding: 0;
+        visibility: hidden;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    a {
+        color: #646464;
+    }
+
+    li {
+        line-height: 40px
+    }
+
+    .dropdown {
+        position: relative;
+        background: #ebcfcba8;
+        right: 40px;
+
+    }
+}
+
+#BiggerNavbar {
+    @include navbar();
+    display: none;
+
+    .leader {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.list-navbar {
+    list-style: none;
+    text-align: center;
+    padding: 0px 10px;
+
+    a {
+        @include link-a();
+        padding: 0;
+        color: white;
+    }
+}
+
+.Dropdown-list::after {
+    content: "";
+    display: inline-block;
+    /* نمایش به صورت بلاک */
+    font-family: 'bootstrap-icons';
+    /* نام فونت آیکن */
+    font-size: 0.8em;
+    /* اندازه فونت */
+    line-height: 1;
+    color: #eee;
+}
+
+.Dropdown-list::after {
+    content: "\F229";
+    /* یونیکد مربوط به آیکن caret-down-fill */
+}
+
+.dropdown {
+    @include blurBox;
+    background-color: #e2e2e261;
+    padding: 10px;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 1;
+    max-width: 200px;
+    width: 100%;
+    line-height: 30px;
+    display: none;
+    margin: 0 -40px;
+    list-style: none;
+
+    a {
+        color: $colorLINKnavbar;
+    }
+}
+
+.Dropdown-list:hover .dropdown {
+    display: block;
+}
+
+
+.dropdown {
+    background-color: #ebcfcb7a;
+
+    .list-navbar {
+        background-color: #ba888b45;
+        border-radius: 3px;
+        margin: 5px 0;
+
+        &:hover {
+            background-color: #fcfcfcd7;
+        }
+    }
+
+
+}
+
+/////////////////////////main///////////////
+#box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .boxHead {
+        @include box(200px, 200px);
+
+        h2 {
+            @include fontBox();
+            margin: -5px 0 -15px;
+        }
+
+        .lin {
+            width: 100px;
+            height: 6px;
+            background-color: beige;
+            position: relative;
+            left: 50px;
+            right: 50px;
+            bottom: 0;
+            top: 10px;
+            background: linear-gradient(90deg, #ba7556 0%, rgba(240, 172, 140, 1) 50%, #ba7556 100%);
+
+        }
+    }
+}
+
+#main-main {
+    background-color: #e2e2e294;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include fontBox();
+    width: 100%;
+    padding: 30px;
+    margin: 20px 0;
+
+    div {
+
+        padding: 20px;
+
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        background-color: $color-Pink;
+        border-radius: 3px;
+        margin: 20px;
+
+
+    }
+
+    #box-center {
+        padding: 5% 0;
+
+        p {
+            font-size: 45px;
+            color: rgb(99, 61, 44);
+            font-size: 2.5rem;
+            /* استفاده از واحدهای ریسپانسیو */
+
+            span {
+                display: block;
+                font-size: 2rem;
+                color: white;
+                font-size: 40px;
+                font-family: "Dancing Script", cursive;
+            }
+
+        }
+
+        .butom {
+            background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
+            width: 150px;
+            margin: 0px auto;
+            transform: skew(-25deg);
+            padding: 0;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+        align-items: center;
+
+            a {
+                @include link-a();
+                font-style: none;
+                font-size: 1.2rem;
+                padding: 5px;
+                transform: skew(25deg);
+                
+            }
+
+
+
+        }
+
+    }
+}
+
+
+.box-center {
+    display: none;
+
+
+
+
+
+    img {
+        width: 100%;
+    }
+
+}
+
+
+
+#boxFooter {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+    p {
+        line-height: 40px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+
+.NewProducts {
+    display: flex;
+    overflow-x: auto;
+    /* استفاده از auto بجای scroll */
+    width: 100%;
+    padding: 10px 0;
+    /* کمی padding اضافه کنید */
+    scroll-snap-type: x mandatory;
+    /* اضافه کردن scroll snapping */
+    scroll-padding: 10px;
+    /* پدینگ برای اسکرول */
+    box-sizing: border-box;
+    /* تضمین اینکه padding و width با هم تداخل ندارند */
+
+}
+
+.NewProducts::-webkit-scrollbar {
+    display: none;
+    /* مخفی کردن scrollbar برای تجربه کاربری بهتر */
+}
+//////////////////////footer////////////////
+.boxFooter {
+    min-width: 200px;
+    /* حداقل عرض هر محصول */
+    margin: 10px;
+    a{
+        @include link-a(25px);
+        color: black;
+
+        h3{
+            font-size: 17px;
+        }
+    }
+}
+
+.boxFooter img {
+    width: 100%;
+    /* استفاده از 100% برای سازگاری بهتر */
+    height: auto;
+    /* ارتفاع خودکار برای حفظ نسبت تصویر */
+}
+
+
+footer {
+    background-color: black;
+    width: 100%;
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+    a {
+        @include link-a();
+        line-height: 40px
+    }
+
+
+    .footer {
+        display: inline-block;
+        min-width: 100px;
+        margin: 10px;
+    }
+}
+
+.communication {
+    display: flex;
+    justify-content: center;
+
+    div:nth-child(2) {
+        background: linear-gradient(52deg, rgba(39, 132, 212, 1) 0%, rgba(112, 203, 250, 1) 59%, rgba(26, 214, 136, 1) 100%);
+    }
+
+    div:nth-child(1) {
+        background: linear-gradient(52deg, rgba(212, 39, 127, 1) 0%, rgba(206, 86, 86, 1) 46%, rgba(174, 112, 250, 1) 72%, rgba(214, 26, 185, 1) 100%);
+    }
+
+    div:nth-child(3) {
+        background: linear-gradient(52deg, rgba(141, 237, 92, 1) 0%, rgba(43, 249, 0, 1) 100%);
+    }
+
+    margin: auto 10px;
+
+    div {
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
+        margin: 10px;
+
+
+        i {
+            font-size: 20px;
+            color: white;
+
+        }
+    }
+}
+
+
+/////////////////////////rispansive/////////////////
+@media(min-width:780px) {
+
+    #head {
+        #menu {
+            display: none;
+        }
+
+        .logohead {
+            display: inline-block;
+            width: 50px;
+            rotate: 5deg;
         }
     }
 
     #miniNavbar {
-        display: inline-block;
-
-        #leader {
-            @include blurBox(20px);
-            position: absolute;
-            width: 200px;
-            height: 100%;
-            left: 0;
-            top: 54px;
-            padding: 0;
-            visibility: hidden;
-            white-space: nowrap;
-            z-index: 1;
-        }
-
-        a {
-            color: #646464;
-        }
-
-        li {
-            line-height: 40px
-        }
-
-        .dropdown {
-            position: relative;
-            background: #ebcfcba8;
-            right: 40px;
-
-        }
+        display: none;
     }
 
     #BiggerNavbar {
-        @include navbar();
-        display: none;
-
-        .leader {
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-    .list-navbar {
-        list-style: none;
-        text-align: center;
-        padding: 0px 10px;
-
-        a {
-            @include link-a();
-            padding: 0;
-            color: white;
-        }
-    }
-
-    .Dropdown-list::after {
-        content: "";
         display: inline-block;
-        /* نمایش به صورت بلاک */
-        font-family: 'bootstrap-icons';
-        /* نام فونت آیکن */
-        font-size: 0.8em;
-        /* اندازه فونت */
-        line-height: 1;
-        color: #eee;
+        @include navbar();
+        padding: 15px;
+
+        // .dropdown {
+        //     background-color: #ebcfcb7a;
+
+        //     .list-navbar {
+        //         background-color: #ba888b45;
+        //         border-radius: 3px;
+        //         margin: 5px 0;
+
+        //         &:hover {
+        //             background-color: #fcfcfcd7;
+        //         }
+        //     }
+
+
+        // }
     }
 
-    .Dropdown-list::after {
-        content: "\F229";
-        /* یونیکد مربوط به آیکن caret-down-fill */
-    }
-
-    .dropdown {
-        @include blurBox;
-        background-color: #e2e2e261;
-        padding: 10px;
-        position: absolute;
-        border-radius: 5px;
-        z-index: 1;
-        max-width: 200px;
-        width: 100%;
-        line-height: 30px;
-        display: none;
-        margin: 0 -40px;
-        list-style: none;
-
-        a {
-            color: $colorLINKnavbar;
-        }
-    }
-
-    .Dropdown-list:hover .dropdown {
-        display: block;
-    }
+    /////////////main/////////////
+    // #main-main {
+    //     width: 100%;
+    //     display: flex;
+    //     div {
+    //         width: 50%;
+    //     }
 
 
-    .dropdown {
-        background-color: #ebcfcb7a;
 
-        .list-navbar {
-            background-color: #ba888b45;
-            border-radius: 3px;
-            margin: 5px 0;
+    //     .box-center {
 
-            &:hover {
-                background-color: #fcfcfcd7;
-            }
-        }
+    //         display: inline;
 
+    //         .banner {
+    //             width: 50%;
 
-    }
-
-    /////////////////////////main///////////////
-    #box {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        .boxHead {
-            @include box(200px, 200px);
-
-            h2 {
-                @include fontBox();
-                margin: -5px 0 -15px;
-            }
-
-            .lin {
-                width: 100px;
-                height: 6px;
-                background-color: beige;
-                position: relative;
-                left: 50px;
-                right: 50px;
-                bottom: 0;
-                top: 10px;
-                background: linear-gradient(90deg, #ba7556 0%, rgba(240, 172, 140, 1) 50%, #ba7556 100%);
-
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 
     #main-main {
         background-color: #e2e2e294;
@@ -200,274 +464,29 @@
         justify-content: center;
         @include fontBox();
         width: 100%;
-        padding: 30px;
-        margin: 20px 0;
 
         div {
+            width: 30%;
 
-            padding: 20px;
-            
-            justify-content: center;
-            text-align: center;
-            width: 100%;
-            background-color: $color-Pink;
-            border-radius: 3px;
-            margin: 20px;
-            height: 100%;
 
         }
 
-        #box-center {
-            p {
-                font-size: 45px;
-                color: rgb(99, 61, 44);
-                font-size: 2.5rem; /* استفاده از واحدهای ریسپانسیو */
-            
-                span {
-                    display: block;
-                    font-size: 20px;
-                    color: white;
-                    font-size: 40px;
-                    font-family: "Dancing Script", cursive;
-                }
+        .box-center {
+            display: inline;
 
-            }
-
-            .butom {
-                background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
-                width: 150px;
-                margin: 0px auto;
-                transform: skew(-25deg);
-                padding: 0;
-                height: 40px;
-
-                a {
-                    @include link-a();
-                    font-style: none;
-                }
-
-                
-
+            img {
+                width: 100%;
             }
 
         }
     }
-        
 
-    .box-center {
-        display: none;
-        
+}
 
-
-        
-
-        img {
-            width: 100%;
-        }
-
-    }
-
-
-
-    #boxFooter {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-
-        p {
-            line-height: 40px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-    }
-
-    .NewProducts {
-        display: flex;
-        overflow-x: auto;
-        /* استفاده از auto بجای scroll */
-        width: 100%;
-        padding: 10px 0;
-        /* کمی padding اضافه کنید */
-        scroll-snap-type: x mandatory;
-        /* اضافه کردن scroll snapping */
-        scroll-padding: 10px;
-        /* پدینگ برای اسکرول */
-        box-sizing: border-box;
-        /* تضمین اینکه padding و width با هم تداخل ندارند */
-
-    }
-
-    .NewProducts::-webkit-scrollbar {
-        display: none;
-        /* مخفی کردن scrollbar برای تجربه کاربری بهتر */
-    }
-
-    .boxFooter {
-        min-width: 200px;
-        /* حداقل عرض هر محصول */
-        margin: 10px;
-    }
-
-    .boxFooter img {
-        width: 100%;
-        /* استفاده از 100% برای سازگاری بهتر */
-        height: auto;
-        /* ارتفاع خودکار برای حفظ نسبت تصویر */
-    }
-
-
-    footer {
-        background-color: black;
-        width: 100%;
-        padding: 10px 20px;
-
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-
+@media(min-width:842px) {
+    .list-navbar {
         a {
-            @include link-a();
-            line-height: 40px
-        }
-
-        .footer {
-            display: inline-block;
-            min-width: 100px;
-            margin: 10px;
-        }
-    }
-
-    .communication {
-        display: flex;
-        justify-content: center;
-
-        div:nth-child(2) {
-            background: linear-gradient(52deg, rgba(39, 132, 212, 1) 0%, rgba(112, 203, 250, 1) 59%, rgba(26, 214, 136, 1) 100%);
-        }
-
-        div:nth-child(1) {
-            background: linear-gradient(52deg, rgba(212, 39, 127, 1) 0%, rgba(206, 86, 86, 1) 46%, rgba(174, 112, 250, 1) 72%, rgba(214, 26, 185, 1) 100%);
-        }
-
-        div:nth-child(3) {
-            background: linear-gradient(52deg, rgba(141,237,92,1) 0%, rgba(43,249,0,1) 100%);
-        }
-
-        margin: auto 10px;
-
-        div {
-            width: 50px;
-            height: 50px;
-            border-radius: 30px;
-            text-align: center;
-            align-items: center;
             padding: 5px;
-            margin: 10px;
-
-
-            i {
-                font-size: 20px;
-                color: white;
-
-            }
         }
     }
-
-
-    /////////////////////////rispansive/////////////////
-    @media(min-width:780px) {
-
-        #head {
-            #menu {
-                display: none;
-            }
-
-            .logohead {
-                display: inline-block;
-                width: 50px;
-                rotate: 5deg;
-            }
-        }
-
-        #miniNavbar {
-            display: none;
-        }
-
-        #BiggerNavbar {
-            display: inline-block;
-            @include navbar();
-            padding: 15px;
-
-            // .dropdown {
-            //     background-color: #ebcfcb7a;
-
-            //     .list-navbar {
-            //         background-color: #ba888b45;
-            //         border-radius: 3px;
-            //         margin: 5px 0;
-
-            //         &:hover {
-            //             background-color: #fcfcfcd7;
-            //         }
-            //     }
-
-
-            // }
-        }
-
-        /////////////main/////////////
-        // #main-main {
-        //     width: 100%;
-        //     display: flex;
-        //     div {
-        //         width: 50%;
-        //     }
-
-
-
-        //     .box-center {
-
-        //         display: inline;
-
-        //         .banner {
-        //             width: 50%;
-
-        //         }
-        //     }
-        // }
-
-        #main-main {
-            background-color: #e2e2e294;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            @include fontBox();
-            width: 100%;
-
-            div {
-                width: 30%;
-                height: 100%;
-
-            }
-
-            .box-center {
-                display: inline;
-
-                img {
-                    width: 100%;
-                }
-
-            }
-        }
-
-    }
-
-    @media(min-width:842px) {
-        .list-navbar {
-            a {
-                padding: 5px;
-            }
-        }
-    }
+}

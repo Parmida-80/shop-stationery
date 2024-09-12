@@ -43,7 +43,7 @@
 }
 
 .logoHeader {
-  width: 200px;
+  width: 11rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -253,7 +253,10 @@
   background-color: #ebcfcb;
   border-radius: 3px;
   margin: 20px;
-  height: 100%;
+}
+
+#main-main #box-center {
+  padding: 5% 0;
 }
 
 #main-main #box-center p {
@@ -265,7 +268,7 @@
 
 #main-main #box-center p span {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   color: white;
   font-size: 40px;
   font-family: "Dancing Script", cursive;
@@ -280,6 +283,15 @@
           transform: skew(-25deg);
   padding: 0;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #main-main #box-center .butom a {
@@ -289,6 +301,10 @@
   padding: 5px;
   font-weight: bold;
   font-style: none;
+  font-size: 1.2rem;
+  padding: 5px;
+  -webkit-transform: skew(25deg);
+          transform: skew(25deg);
 }
 
 .box-center {
@@ -344,6 +360,19 @@
   min-width: 200px;
   /* حداقل عرض هر محصول */
   margin: 10px;
+}
+
+.boxFooter a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 5px;
+  font-weight: bold;
+  color: black;
+}
+
+.boxFooter a h3 {
+  font-size: 17px;
 }
 
 .boxFooter img {
@@ -459,7 +488,6 @@ footer .footer {
   }
   #main-main div {
     width: 30%;
-    height: 100%;
   }
   #main-main .box-center {
     display: inline;
