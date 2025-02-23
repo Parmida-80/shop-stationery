@@ -1,0 +1,518 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gulzar&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:Root {
+  width: 100%;
+  height: 100%;
+}
+
+#head {
+  width: 100%;
+  background-color: #ebcfcb;
+  height: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#head i {
+  font-size: 30px;
+  color: white;
+}
+
+#head #menu {
+  position: relative;
+}
+
+#head .logohead {
+  display: none;
+}
+
+.background-logo {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 30%;
+  background-color: #fdfdfd5e;
+  padding: 10px 0;
+}
+
+.logoHeader {
+  width: 11rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner img {
+  width: 100%;
+  position: relative;
+}
+
+#miniNavbar {
+  display: inline-block;
+}
+
+#miniNavbar #leader {
+  padding: 20px;
+  background-color: #ebcfcb47;
+  backdrop-filter: blur(10px);
+  /* ایجاد افکت بلور */
+  -webkit-backdrop-filter: blur(10px);
+  /* ایجاد افکت بلور برای مرورگرهای قدیمی‌تر */
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  left: 0;
+  top: 54px;
+  padding: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+#miniNavbar a {
+  color: #646464;
+}
+
+#miniNavbar li {
+  line-height: 40px;
+}
+
+#miniNavbar .dropdown {
+  position: relative;
+  background: #ebcfcba8;
+  right: 40px;
+}
+
+#BiggerNavbar {
+  width: 100%;
+  background-color: #ebcfcb;
+  height: 100%;
+  padding: 10px;
+  display: none;
+}
+
+#BiggerNavbar .leader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.list-navbar {
+  list-style: none;
+  text-align: center;
+  padding: 0px 10px;
+}
+
+.list-navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
+  padding: 0;
+  color: white;
+}
+
+.Dropdown-list::after {
+  content: "";
+  display: inline-block;
+  /* نمایش به صورت بلاک */
+  font-family: 'bootstrap-icons';
+  /* نام فونت آیکن */
+  font-size: 0.8em;
+  /* اندازه فونت */
+  line-height: 1;
+  color: #eee;
+}
+
+.Dropdown-list::after {
+  content: "\F229";
+  /* یونیکد مربوط به آیکن caret-down-fill */
+}
+
+.dropdown {
+  padding: 0;
+  background-color: #ebcfcb47;
+  backdrop-filter: blur(10px);
+  /* ایجاد افکت بلور */
+  -webkit-backdrop-filter: blur(10px);
+  /* ایجاد افکت بلور برای مرورگرهای قدیمی‌تر */
+  background-color: #e2e2e261;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  z-index: 1;
+  max-width: 200px;
+  width: 100%;
+  line-height: 30px;
+  display: none;
+  margin: 0 -40px;
+  list-style: none;
+}
+
+.dropdown a {
+  color: #646464;
+}
+
+.Dropdown-list:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  background-color: #ebcfcb7a;
+}
+
+.dropdown .list-navbar {
+  background-color: #ba888b45;
+  border-radius: 3px;
+  margin: 5px 0;
+}
+
+.dropdown .list-navbar:hover {
+  background-color: #fcfcfcd7;
+}
+
+#box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#box .boxHead {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  background-color: #ebcfcb;
+  margin: 10px 30px;
+  -webkit-box-shadow: 0px 1px 6px 0px #a2a2a2;
+          box-shadow: 0px 1px 6px 0px #a2a2a2;
+  padding: 70px 0;
+}
+
+#box .boxHead h2 {
+  color: aliceblue;
+  font-family: "Gulzar", serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: -5px 0 -15px;
+}
+
+#box .boxHead .lin {
+  width: 100px;
+  height: 6px;
+  background-color: beige;
+  position: relative;
+  left: 50px;
+  right: 50px;
+  bottom: 0;
+  top: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#ba7556), color-stop(50%, #f0ac8c), to(#ba7556));
+  background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
+}
+
+#main-main {
+  background-color: #e2e2e294;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: aliceblue;
+  font-family: "Gulzar", serif;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  padding: 30px;
+  margin: 20px 0;
+}
+
+#main-main div {
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: #ebcfcb;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+#main-main #box-center {
+  padding: 5% 0;
+}
+
+#main-main #box-center p {
+  font-size: 45px;
+  color: #633d2c;
+  font-size: 2.5rem;
+  /* استفاده از واحدهای ریسپانسیو */
+}
+
+#main-main #box-center p span {
+  display: block;
+  font-size: 2rem;
+  color: white;
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+}
+
+#main-main #box-center .butom {
+  background: -webkit-gradient(linear, left top, right top, from(#ba7556), color-stop(50%, #f0ac8c), to(#ba7556));
+  background: linear-gradient(90deg, #ba7556 0%, #f0ac8c 50%, #ba7556 100%);
+  width: 150px;
+  margin: 0px auto;
+  -webkit-transform: skew(-25deg);
+          transform: skew(-25deg);
+  padding: 0;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-main #box-center .butom a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
+  font-style: none;
+  font-size: 1.2rem;
+  padding: 5px;
+  -webkit-transform: skew(25deg);
+          transform: skew(25deg);
+}
+
+.box-center {
+  display: none;
+}
+
+.box-center img {
+  width: 100%;
+}
+
+#boxFooter {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#boxFooter p {
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.NewProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  /* استفاده از auto بجای scroll */
+  width: 100%;
+  padding: 10px 0;
+  /* کمی padding اضافه کنید */
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  /* اضافه کردن scroll snapping */
+  scroll-padding: 10px;
+  /* پدینگ برای اسکرول */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* تضمین اینکه padding و width با هم تداخل ندارند */
+}
+
+.NewProducts::-webkit-scrollbar {
+  display: none;
+  /* مخفی کردن scrollbar برای تجربه کاربری بهتر */
+}
+
+.boxFooter {
+  min-width: 200px;
+  /* حداقل عرض هر محصول */
+  margin: 10px;
+}
+
+.boxFooter a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 5px;
+  font-weight: bold;
+  color: black;
+}
+
+.boxFooter a h3 {
+  font-size: 17px;
+}
+
+.boxFooter img {
+  width: 100%;
+  /* استفاده از 100% برای سازگاری بهتر */
+  height: auto;
+  /* ارتفاع خودکار برای حفظ نسبت تصویر */
+}
+
+footer {
+  background-color: black;
+  width: 100%;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+footer .footer {
+  display: inline-block;
+  min-width: 100px;
+  margin: 10px;
+}
+
+.communication {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto 10px;
+}
+
+.communication div:nth-child(2) {
+  background: linear-gradient(52deg, #2784d4 0%, #70cbfa 59%, #1ad688 100%);
+}
+
+.communication div:nth-child(1) {
+  background: linear-gradient(52deg, #d4277f 0%, #ce5656 46%, #ae70fa 72%, #d61ab9 100%);
+}
+
+.communication div:nth-child(3) {
+  background: linear-gradient(52deg, #8ded5c 0%, #2bf900 100%);
+}
+
+.communication div {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+.communication div i {
+  font-size: 20px;
+  color: white;
+}
+
+@media (min-width: 780px) {
+  #head #menu {
+    display: none;
+  }
+  #head .logohead {
+    display: inline-block;
+    width: 50px;
+    rotate: 5deg;
+  }
+  #miniNavbar {
+    display: none;
+  }
+  #BiggerNavbar {
+    display: inline-block;
+    width: 100%;
+    background-color: #ebcfcb;
+    height: 100%;
+    padding: 10px;
+    padding: 15px;
+  }
+  #main-main {
+    background-color: #e2e2e294;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: aliceblue;
+    font-family: "Gulzar", serif;
+    font-weight: 500;
+    font-style: normal;
+    width: 100%;
+  }
+  #main-main div {
+    width: 30%;
+  }
+  #main-main .box-center {
+    display: inline;
+  }
+  #main-main .box-center img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 842px) {
+  .list-navbar a {
+    padding: 5px;
+  }
+}
+/*# sourceMappingURL=indexCss.css.map */
