@@ -416,7 +416,8 @@ footer {
 }
 
 
-/////////////////////////rispansive/////////////////
+/////////////////////////rispansive//////////////////////////////////////////////
+
 @media(min-width:780px) {
 
     #head {
@@ -509,5 +510,13 @@ footer {
         a {
             padding: 5px;
         }
+    }
+
+    .background-logo{
+        display: contents;
+    }
+
+    .logoHeader{
+        margin: 5px auto;
     }
 }

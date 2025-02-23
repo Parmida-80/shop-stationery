@@ -520,5 +520,11 @@ footer .footer {
   .list-navbar a {
     padding: 5px;
   }
+  .background-logo {
+    display: contents;
+  }
+  .logoHeader {
+    margin: 5px auto;
+  }
 }
 /*# sourceMappingURL=indexCss.css.map */
