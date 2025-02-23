@@ -42,6 +42,10 @@
   display: none;
 }
 
+.positionBaner {
+  position: relative;
+}
+
 .background-logo {
   width: 100%;
   position: absolute;
@@ -49,7 +53,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  top: 30%;
+  top: 50%;
   background-color: #fdfdfd5e;
   padding: 10px 0;
 }
@@ -86,6 +90,8 @@
   visibility: hidden;
   white-space: nowrap;
   z-index: 1;
+  position: fixed;
+  z-index: 5;
 }
 
 #miniNavbar a {

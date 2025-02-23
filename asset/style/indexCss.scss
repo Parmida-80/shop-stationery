@@ -35,22 +35,28 @@
         display: none
     }
 }
-.background-logo{
+
+.positionBaner {
+    position: relative;
+}
+
+.background-logo {
     width: 100%;
     position: absolute;
     z-index: 1;
     left: 50%;
-    transform: translate(-50%,-50%);
-    top: 30%;
+    transform: translate(-50%, -50%);
+    top: 50%;
     background-color: #fdfdfd5e;
     padding: 10px 0;
 }
+
 .logoHeader {
     width: 11rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
+
 
 }
 
@@ -78,6 +84,8 @@
         visibility: hidden;
         white-space: nowrap;
         z-index: 1;
+        position: fixed;
+        z-index: 5;
     }
 
     a {
@@ -256,7 +264,7 @@
             height: 40px;
             display: flex;
             justify-content: center;
-        align-items: center;
+            align-items: center;
 
             a {
                 @include link-a();
@@ -264,7 +272,7 @@
                 font-size: 1.2rem;
                 padding: 5px;
                 transform: skew(25deg);
-                
+
             }
 
 
@@ -323,16 +331,18 @@
     display: none;
     /* مخفی کردن scrollbar برای تجربه کاربری بهتر */
 }
+
 //////////////////////footer////////////////
 .boxFooter {
     min-width: 200px;
     /* حداقل عرض هر محصول */
     margin: 10px;
-    a{
+
+    a {
         @include link-a(25px);
         color: black;
 
-        h3{
+        h3 {
             font-size: 17px;
         }
     }
