@@ -21,6 +21,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 55px;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 1px -6px 20px 0px #a3a3a3;
 
     i {
         font-size: 30px;
@@ -38,6 +42,7 @@
 
 .positionBaner {
     position: relative;
+    margin-top: 50px;
 }
 
 .background-logo {
@@ -421,6 +426,7 @@ footer {
 @media(min-width:780px) {
 
     #head {
+        position: inherit;
         #menu {
             display: none;
         }

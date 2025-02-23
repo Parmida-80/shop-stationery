@@ -27,6 +27,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 55px;
+  position: fixed;
+  z-index: 10;
+  -webkit-box-shadow: 1px -6px 20px 0px #a3a3a3;
+          box-shadow: 1px -6px 20px 0px #a3a3a3;
 }
 
 #head i {
@@ -44,6 +49,7 @@
 
 .positionBaner {
   position: relative;
+  margin-top: 50px;
 }
 
 .background-logo {
@@ -470,6 +476,9 @@ footer .footer {
 }
 
 @media (min-width: 780px) {
+  #head {
+    position: inherit;
+  }
   #head #menu {
     display: none;
   }
